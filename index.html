@@ -6,6 +6,7 @@
     <title>Focus Timer V2</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./src/main.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -16,36 +17,18 @@
                 <span class="seconds">00</span>
             </div>
             <div class="timer__controls">
-                <div class="timer__controls--item play">
-                    <i class="ph-fill ph-play"></i>
-                </div>
-                <div class="timer__controls--item pause hide">
-                    <i class="ph-fill ph-pause"></i>
-                </div>
-                <div class="timer__controls--item reset">
-                    <i class="ph-fill ph-square"></i>
-                </div>
-                <div class="timer__controls--item increase">
-                    <i class="ph-bold ph-plus"></i>
-                </div>
-                <div class="timer__controls--item minus">
-                    <i class="ph-bold ph-minus"></i>
-                </div>
+                <div class="timer__controls--item play ph-fill ph-play" data-action="toggleRunning"></div>
+                <div class="timer__controls--item pause ph-fill ph-pause" data-action="toggleRunning"></div>
+                <div class="timer__controls--item reset ph-fill ph-square" data-action="reset"></div>
+                <div class="timer__controls--item increase ph-bold ph-plus" data-action="increaseTime"></div>
+                <div class="timer__controls--item minus ph-bold ph-minus" data-action="lowerTime"></div>
             </div>
         </div>
         <div class="sounds">
-            <div class="sound forrest">
-                <i class="ph ph-tree-evergreen"></i>
-            </div>
-            <div class="sound rain">
-                <i class="ph ph-cloud-rain"></i>
-            </div>
-            <div class="sound coffee">
-                <i class="ph ph-coffee"></i>
-            </div>
-            <div class="sound fire">
-                <i class="ph ph-fire"></i>
-            </div>
+            <div class="sound forest ph ph-tree-evergreen" data-sound="forestPlay"></div>
+            <div class="sound rain ph ph-cloud-rain" data-sound="rainPlay"></div>
+            <div class="sound coffee ph ph-coffee" data-sound="coffeePlay"></div>
+            <div class="sound fire ph ph-fire" data-sound="firePlay"></div>
         </div>
     </div>
 </body>

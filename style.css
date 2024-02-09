@@ -38,6 +38,8 @@ body {
     display: flex;
     gap: 4rem;
     margin-top: 2.8rem;
+
+    cursor: pointer;
 }
 
 .timer__controls--item {
@@ -71,8 +73,16 @@ body {
     border-radius: 2.4rem;
 
     font-size: 5.6rem;
+    cursor: pointer;
 }
 
-.hide {
+.sound:hover,
+.sound.selected {
+    background: var(--card-selected-bg);
+    color: #fff;
+}
+
+html:not(.running) .pause,
+html.running .play {
     display: none;
 }
